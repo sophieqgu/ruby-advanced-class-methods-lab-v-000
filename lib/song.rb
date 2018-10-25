@@ -45,7 +45,7 @@ class Song
     song = self.new
     parsed = filename.split(" - ") 
     song.artist_name = parsed[0]
-    song.name = parsed[1].slice(0..-5)
+    song.name = parsed[1].chomp(".mp3")
     song 
   end
   
